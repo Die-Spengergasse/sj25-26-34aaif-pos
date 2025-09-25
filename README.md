@@ -1,5 +1,13 @@
 # sj25-26-34aaif-pos
 
+## 2025-09-25
+
+Aufgabe Tests
+
+- ausgehend vom vorhandenen Test: für alle 6 Gewichtsfälle verfassen. (m/f + unter/normal/über)
+- das errechnete BMI mit assertEquals und Genauigkeit von 0.1 abzutesten (3 Testfälle erzeugen)
+- überprüfen ob der Konstruktor auch tatsächlich Errors wirft (Recherche nötig)
+
 ## PLÜs Dauer jeweils 2UE
 
 - 2025-11-10

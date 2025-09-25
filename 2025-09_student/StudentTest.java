@@ -40,8 +40,10 @@ public class StudentTest
     
     @Test
     public void testWertung() {
-        Student ferdi = new Student("Ferdinand", true, 181, 100);
-        assertEquals("Übergewichtig", ferdi.bmi_werter(), "BMI Wertung");
+        Student student = new Student("Ferdinand", true, 181, 100);
+        assertEquals("Übergewichtig", student.bmi_werter(), "BMI Wertung");
+        student = new Student("Harald", false, 200, 65);
+        assertEquals("Untergewichtig", 
     }
     /**
      * Tears down the test fixture.

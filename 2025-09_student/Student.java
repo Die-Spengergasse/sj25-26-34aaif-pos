@@ -90,20 +90,18 @@ public class Student
             if (bmi < normal_min_m){
                 return "Untergewicht";
             }
-            else if (bmi > normal_max_m){
+            if (bmi > normal_max_m){
                 return "Übergewicht";
             }
-            else return "Normal";
+            return "Normal";
         }
-        else if (gender == 'f'){
-            if (bmi < normal_min_f){
-                return "Untergewicht";
-            }
-            else if (bmi > normal_max_f){
-                return "Übergewicht";
-            }
-            else return "Normal";
+        // Ab hier bin ich sicher sie ist (this) FRAU
+        if (bmi < normal_min_f){
+            return "Untergewicht";
         }
-        else return "Error";
+        if (bmi > normal_max_f){
+            return "Übergewicht";
+        }
+        return "Normal";
     }
 }
