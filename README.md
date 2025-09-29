@@ -1,5 +1,20 @@
 # sj25-26-34aaif-pos
 
+try / catch erklären!!
+
+## 2025-09-29
+
+- git: fetch / remotes / Aufbau / Graph
+- String Klasse
+- Pyramid of doom
+
+HÜ: Skriptum Kap 5: Objektreferenzen
+
+- Klasse Auto zusätzlich ins bluej übernehmen aus dem Skriptum
+- Klasse Student auf Person umbenennen und mit Person weiterarbeiten
+- die Auto.einsteigen() und Auto.aussteigen() und andere von der Pyramid of doom ändern auf `throw new Illegal[Argument|State]Exception`
+- Tests schreiben
+
 ## 2025-09-25
 
 Aufgabe Tests
