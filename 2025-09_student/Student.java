@@ -1,4 +1,4 @@
-public class Student
+public class Student extends Object
 {
     private String name;
     private float kg;
@@ -25,11 +25,24 @@ public class Student
         }
     }
 
+    public void setNameJakob (String name) {
+        try {
+            if ((name.length() >= 3) && (name.length() <= 50)) {// Wenn wahr: Name gültig
+                this.name = name;
+            } else {
+                // Name falsch, aber was machen jetzt?
+                throw new IllegalArgumentException("Name muss 3-50 Buchstaben haben");
+            }
+        } catch (IllegalArgumentException e) {
+            throw e;
+        }
+    }
     // setter für name
     public void setName (String name) {
         // TODO separate Meldungen zu kurz bzw. zu lang
-        if ((name.length() < 3) || (name.length() > 50)) {
+        if ((name.length() < 3) || (name.length() > 50)) {  // wenn wahr: name ungültig
             throw new IllegalArgumentException("Name muss 3-50 Buchstaben haben");
+            // System.out.println("OLDSCOOL: Name ist falsch zu kurz oder zu lang");
         }
         // Ab hier weiss ich dass name meinen Kriterien entspricht
         this.name = name;
@@ -88,20 +101,20 @@ public class Student
         float bmi = this.bmi();
         if (gender == 'm'){
             if (bmi < normal_min_m){
-                return "Untergewicht";
+                return "Untergewichtig";
             }
             if (bmi > normal_max_m){
-                return "Übergewicht";
+                return "Übergewichtig";
             }
-            return "Normal";
+            return "Normalgewichtig";
         }
         // Ab hier bin ich sicher sie ist (this) FRAU
         if (bmi < normal_min_f){
-            return "Untergewicht";
+            return "Untergewichtig";
         }
         if (bmi > normal_max_f){
-            return "Übergewicht";
+            return "Übergewichtig";
         }
-        return "Normal";
+        return "Normalgewichtig";
     }
 }

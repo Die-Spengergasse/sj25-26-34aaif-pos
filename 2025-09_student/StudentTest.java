@@ -1,5 +1,4 @@
 
-
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -37,19 +36,30 @@ public class StudentTest
         //assert(false);
         // kein Code bedeutet Test wird gut gehen ... TODO
     }
-    
+
     @Test
     public void testWertung() {
         Student student = new Student("Ferdinand", true, 181, 100);
         assertEquals("Übergewichtig", student.bmi_werter(), "BMI Wertung");
-        student = new Student("Harald", false, 200, 65);
-        assertEquals("Untergewichtig", 
+        System.out.println(student);    
+        // student = new Student("Harald", false, 200, 65);
+        // assertEquals("Untergewichtig", 
     }
-    /**
-     * Tears down the test fixture.
-     *
-     * Called after every test case method.
-     */
+
+    @Test
+    public void testFalscherNameThrows() {
+        Student stud;
+        try {
+            stud = new Student("Fe", true, 180, 70);  // exception erwartet!!
+            // sehr patscherte Art, um eine AssertionException zu werfen:
+            // assertEquals(true, false, "student wurde trotz zu kurzem Namen erzeugt");
+            fail("student wurde trotz zu kurzem Namen erzeugt");
+        }
+        catch (IllegalArgumentException e) {
+            System.out.println("Exception gefangen: " + e.getMessage());
+        }
+    }
+
     @AfterEach
     public void tearDown()
     {
