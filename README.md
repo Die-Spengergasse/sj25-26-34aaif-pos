@@ -1,5 +1,14 @@
 # sj25-26-34aaif-pos
 
+## 2025-10-06
+
+Vertiefung einsteigen / aussteigen
+
+HÜ: einsteigen / aussteigen GRÜNDLICH testen UND
+
+@BeforeEach - setup() verwedenden!!
+
+
 try / catch erklären!!
 
 ## 2025-09-29
